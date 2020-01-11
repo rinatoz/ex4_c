@@ -14,7 +14,7 @@ limytrie.so: $(OBJECTS_MY_TRIE)
 limytrie.a: $(OBJECTS_MY_TRIE) 
 	$(AR) -rcs limytrie.a $(OBJECTS_MY_TRIE) 	
 trie.o: trie.c trie.h
-	$(CC) $(FLAGS) -c trie.c
+	$(CC) $(FLAGS) -fPIC -c trie.c
 main.o: main.c trie.h  
 	$(CC) $(FLAGS) -c main.c 
 
